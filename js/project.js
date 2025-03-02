@@ -20,6 +20,11 @@ document.getElementById("random-bg-color").addEventListener("click", function(){
     document.getElementById("date-calculate").textContent = `${month} ${day} ${year}`;
 }
 
-const myDate = new Date("2025-02-28"); // Example date
+const myDate = new Date("2025-03-02"); // Example date
 formatDate(myDate);
+
+
+function goSecondSite(){
+    window.location.href = "../second.html"
+  }
 
