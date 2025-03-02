@@ -9,3 +9,17 @@ document.getElementById("random-bg-color").addEventListener("click", function(){
       document.body.style.backgroundColor = color
     }
   })
+
+
+  function formatDate(date) {
+    const options = { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' };
+    const formatted = new Intl.DateTimeFormat('en-US', options).format(date);
+    
+    const [weekday, month, day, year] = formatted.replace(",", "").split(" ");
+    document.getElementById("date-calculate").textContent = `${weekday},`;
+    document.getElementById("date-calculate").textContent = `${month} ${day} ${year}`;
+}
+
+const myDate = new Date("2025-02-28"); // Example date
+formatDate(myDate);
+
