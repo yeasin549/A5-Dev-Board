@@ -24,7 +24,7 @@
                     <div class="gap-5">
                         <div class="flex items-center gap-2">
                         <img class="w-6 h-6" src="assets/checkbox.png" alt="">
-                        <h3 class="text-2xl">23</h3>
+                        <span class="text-2xl" id="number">23</span>
                         </div>
                         <div class="mr-5">
                         <img id="random-bg-color" class="bg-slate-400 rounded-2xl" src="assets/theme-btn.png" alt="">
@@ -46,8 +46,10 @@
                  <div class="flex items-center gap-6 pr-16 p-3 bg-[#F4F7FF] rounded-lg h-32">
                     <img class="p-5 bg-white rounded-full" src="./assets/checkbox.png" alt="">
                     <div>
-                        <p class="text-[#00303C] text-base font-medium">Task Assigned </p>
-                        <h3 class="text-[#00303C] font-bold text-3xl" >0<span id="task-assigned-btn">6</span></h3>
+                        <h2 class="text-xl">Task Assigned </h2>
+                        <div id="task-count">6</div>
+                        
+                        
                     </div>
                  </div>
                  
@@ -69,89 +71,89 @@
                 </div>
 
                 <div class="grid grid-cols-1 p-4 bg-white md:grid-cols-2 lg:grid-cols-3 gap-9">
-                    <div class="bg-gray-100 rounded-2xl p-6">
+                    <div class="bg-gray-100 rounded-2xl p-6 card">
                         <p class="inline-block px-1 py-4 text-base bg-white rounded-lg">ShopEase</p>
                         <h3 class="my-4 text-2xl font-medium card-title">Fix Mobile Button Issue </h3>
                         <p class="p-4 text-base bg-white mb-7 rounded-lg ">Resolve unresponsive mobile button issues by fixing touch events, CSS styles, and layout inconsistencies. </span></p>
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-sm text-[#00303C]">Deadline</p>
-                                <h4 class="text-base font-medium text-[#00303C]">21 March 2025</h4>
+                                <h4 class="text-base font-medium text-[#00303C]">22 February 2025</h4>
                             </div>
                             <div>
-                                <button  class="btn bg-[#3752FD] hover:text-black text-white text-base font-medium">Completed</button>
+                                <button  class="btn bg-[#3752FD] hover:text-black text-white text-base font-medium complete-button">Completed</button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-gray-100 rounded-2xl p-6">
+                    <div class="bg-gray-100 rounded-2xl p-6 card">
                         <p class="inline-block px-2 py-4 text-base bg-white rounded-lg">CloudSync</p>
                         <h3 class="my-4 text-2xl font-medium card-title" >Add Dark Mode</h3>
                         <p class="p-4 text-base bg-white mb-7 rounded-lg">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect. </p>
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-sm text-[#00303C]">Deadline</p>
-                                <h4 class="text-base font-medium text-[#00303C]">21 March 2025</h4>
+                                <h4 class="text-base font-medium text-[#00303C]">21 February 2025</h4>
                             </div>
                             <div>
-                                <button  class="btn bg-[#3752FD] hover:text-black text-white text-base font-medium">Completed</button>
+                                <button  class="btn bg-[#3752FD] hover:text-black text-white text-base font-medium complete-button">Completed</button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-gray-100 rounded-2xl p-6">
+                    <div class="bg-gray-100 rounded-2xl p-6 card">
                         <p class="inline-block px-2 py-4 text-base bg-white rounded-lg">SwiftPay</p>
                         <h3 class="my-4 text-2xl font-medium card-title">Optimize  Home page </h3>
                         <p class="p-4 text-base bg-white mb-7 rounded-lg">Enhance home page performance by improving load speed, optimizing images, refining layout, and enhancing user experience. </p>
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-sm text-[#00303C]">Deadline</p>
-                                <h4 class="text-base font-medium text-[#00303C]">21 March 2025</h4>
+                                <h4 class="text-base font-medium text-[#00303C]">23 February</h4>
                             </div>
                             <div>
-                                <button class="btn bg-[#3752FD] hover:text-black text-white text-base font-medium">Completed</button>
+                                <button class="btn bg-[#3752FD] hover:text-black text-white text-base font-medium complete-button">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-gray-100 rounded-2xl p-6">
+                    <div class="bg-gray-100 rounded-2xl p-6 card">
                         <p class="inline-block px-2 py-4 my-4 text-base bg-white rounded-lg">Meta</p>
                         <h3 class="text-2xl font-medium card-title">Add new emoji 🤲</h3>
                         <p class="p-4 text-base bg-white mb-5 rounded-lg mt-2">Introduce a new ✋ emoji by updating the emoji set, ensuring compatibility, and enhancing user expression. </p>
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-sm text-[#00303C]">Deadline</p>
-                                <h4 class="text-base font-medium text-[#00303C]">21 March 2025</h4>
+                                <h4 class="text-base font-medium text-[#00303C]">25 February 2025</h4>
                             </div>
                             <div>
-                                <button class="btn bg-[#3752FD] hover:text-black text-white text-base font-medium">Completed</button>
+                                <button class="btn bg-[#3752FD] hover:text-black text-white text-base font-medium complete-button">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-gray-100 rounded-2xl p-6">
+                    <div class="bg-gray-100 rounded-2xl p-6 card">
                         <p class="inline-block px-2 py-4 text-base bg-white rounded-lg">Google LLC</p>
                         <h3 class="my-4 text-2xl font-medium card-title" >Integrate OpenAI API </h3>
                         <p class="p-4 text-base bg-white mb-7 rounded-lg">Ntegrate OpenAI API to enable AI-powered features, automate tasks, enhance user interactions, and improve efficiency.</p>
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-sm text-[#00303C]">Deadline</p>
-                                <h4 class="text-base font-medium text-[#00303C]">21 March 2025</h4>
+                                <h4 class="text-base font-medium text-[#00303C]">24 February 2025</h4>
                             </div>
                             <div>
-                                <button class="btn bg-[#3752FD] hover:text-black text-white text-base font-medium">Completed</button>
+                                <button class="btn bg-[#3752FD] hover:text-black text-white text-base font-medium complete-button">Completed</button>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-gray-100 rounded-2xl p-6">
+                    <div class="bg-gray-100 rounded-2xl p-6 card">
                         <p class="inline-block px-2 py-4 text-base bg-white rounded-lg">Glassdoar</p>
                         <h3 class="my-4 text-2xl font-medium card-title">Glassdoar</h3>
                         <p class="p-4 text-base bg-white mb-7 rounded-lg">Enhance job searching by refining filters, improving recommendations, optimizing UI, and streamlining application processes.</p>
                         <div class="flex items-center justify-between">
                             <div>
                                 <p class="text-sm text-[#00303C]">Deadline</p>
-                                <h4 class="text-base font-medium text-[#00303C]">21 March 2025</h4>
+                                <h4 class="text-base font-medium text-[#00303C]">20 February 2025</h4>
                             </div>
                             <div>
-                                <button class="btn bg-[#3752FD] hover:text-black text-white text-base font-medium">Completed</button>
+                                <button class="btn bg-[#3752FD] hover:text-black text-white text-base font-medium complete-button">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -160,8 +162,8 @@
                 </div>
 
             </div>
-            <div class="p-6 bg-white md:w-3/12  md:h-[918px]">
-                <div  class="">
+            <div id="history-list" class="p-6 bg-white md:w-3/12  md:h-[918px]">
+                <div  >
                    <div class="flex items-center justify-center gap-3 mb-4 text-xl">
                     <img class="w-6 h-6" src="./assets/activity.png" alt="">
                     <p class="font-medium">Activity Log</p>
@@ -187,5 +189,6 @@
     </main>        
     
     <script src="js/project.js"></script>
+    <script src="js/activity.js"></script>
 </body>
 </html>

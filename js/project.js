@@ -20,11 +20,62 @@ document.getElementById("random-bg-color").addEventListener("click", function(){
     document.getElementById("date-calculate").textContent = `${month} ${day} ${year}`;
 }
 
-const myDate = new Date("2025-03-02"); // Example date
+const myDate = new Date("2025-03-02"); 
 formatDate(myDate);
 
 
-function goSecondSite(){
-    window.location.href = "../second.html"
-  }
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const completeButtons = document.querySelectorAll('.complete-button');
+  const taskCountElement = document.getElementById('task-count');
+  const scoreElement = document.getElementById('task-count');
+
+  let taskCount = parseInt(taskCountElement.textContent);
+  let score = parseInt(scoreElement.textContent);
+
+  completeButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      if (taskCount > 0) {
+        taskCount--;
+        taskCountElement.textContent = taskCount;
+      }
+
+      this.disabled = true;
+      alert('Task Completed Successfully');
+
+      if (taskCount === 0) {
+        score++;
+        scoreElement.textContent = score;
+      }
+    });
+  });
+});
+
+
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
