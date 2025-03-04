@@ -25,6 +25,28 @@ formatDate(myDate);
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  let completedTasks = 23;
+  const taskCountElement = document.getElementById("task-add");
+  const completeButtons = document.querySelectorAll(".complete-button");
+
+  completeButtons.forEach(button => {
+      button.addEventListener("click", function () {
+          if (!this.classList.contains("completed")) {
+              completedTasks++;
+              taskCountElement.innerText = completedTasks;
+              this.classList.add("completed");
+              this.innerText = "Completed";
+              this.classList.add("bg-purple-600");
+              this.classList.add("bg-gray-400", "cursor-not-allowed");
+              this.disabled = true;
+          }
+      });
+  });
+});
+
+
+
 
 
 
@@ -47,10 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.disabled = true;
       alert('Task Completed Successfully');
 
-      if (taskCount === 0) {
-        score++;
-        scoreElement.textContent = score;
-      }
+      
     });
   });
 });
