@@ -20,7 +20,7 @@ document.getElementById("random-bg-color").addEventListener("click", function(){
     document.getElementById("date-calculate").textContent = `${month} ${day} ${year}`;
 }
 
-const myDate = new Date("2025-03-02"); 
+const myDate = new Date("2025-03-04"); 
 formatDate(myDate);
 
 
@@ -48,16 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
   const completeButtons = document.querySelectorAll('.complete-button');
   const taskCountElement = document.getElementById('task-count');
-  const scoreElement = document.getElementById('task-count');
+  const logList = document.getElementById('log-list'); 
+  const clearHistoryButton = document.getElementById('clear-history');
 
   let taskCount = parseInt(taskCountElement.textContent);
-  let score = parseInt(scoreElement.textContent);
 
   completeButtons.forEach(button => {
     button.addEventListener('click', function() {
@@ -66,13 +63,67 @@ document.addEventListener('DOMContentLoaded', function() {
         taskCountElement.textContent = taskCount;
       }
 
-      this.disabled = true;
-      alert('Task Completed Successfully');
+      this.disabled = true; 
+      alert(' Task Completed Successfully!');
 
       
+      const taskTitle = this.closest('.task-box').querySelector('h3').textContent;
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = now.getMinutes().toString().padStart(2, '0'); 
+      const amPm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12 || 12; 
+      const currentTime = `${hours}:${minutes} ${amPm}`;
+
+      const listItem = document.createElement('li');
+      listItem.textContent = `You have complete the task ${taskTitle} at -  ${currentTime}   `;
+      logList.appendChild(listItem);
     });
   });
+
+ 
+  clearHistoryButton.addEventListener('click', function() {
+    logList.innerHTML = ""; 
+  });
 });
+
+
+
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const completeButtons = document.querySelectorAll('.complete-button');
+//   const taskCountElement = document.getElementById('task-count');
+//   const scoreElement = document.getElementById('task-count');
+
+//   let taskCount = parseInt(taskCountElement.textContent);
+//   let score = parseInt(scoreElement.textContent);
+
+//   completeButtons.forEach(button => {
+//     button.addEventListener('click', function() {
+//       if (taskCount > 0) {
+//         taskCount--;
+//         taskCountElement.textContent = taskCount;
+//       }
+
+//       this.disabled = true;
+//       alert('Task Completed Successfully');
+
+      
+//     });
+
+    
+//   });
+
+
+
+
+
+
+
+
 
 
     
